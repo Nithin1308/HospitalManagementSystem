@@ -1,5 +1,13 @@
+FROM maven:3.9.6-eclipse-temurin-17 AS build
+
+WORKDIR /app
+
+COPY . .
+
+RUN mvn clean package
+
 FROM tomcat:9.0
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY src/main/webapp /usr/local/tomcat/webapps/ROOT
+COPY --from=build /app/target/ROOT.war /usr/local/tomcat/webapps/ROOT.war
