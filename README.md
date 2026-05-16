@@ -66,9 +66,6 @@ DBConnection.java
 mvn clean package
 ```
 
-## Author
-
-Nithin
 ## Screenshots
 
 ### Login Page
@@ -78,3 +75,7 @@ Nithin
 ### Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
+
+## Author
+
+Nithin
